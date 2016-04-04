@@ -39,8 +39,15 @@ static NSString *const kManagedObjectModelName = @"Model";
         }
     }
     
-    NSString *demoDataPath = [[NSBundle mainBundle] pathForResource:@"demo" ofType:@"json"];
-    [_dataController loadDataFrom:demoDataPath];
+    NSString *dataPath;
+    BOOL testJson = [[[NSProcessInfo processInfo] arguments] containsObject:@"testJson"];
+    if (testJson) {
+        dataPath = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"json"];
+    } else {
+        dataPath = [[NSBundle mainBundle] pathForResource:@"allStations" ofType:@"json"];
+    }
+    
+    [_dataController loadDataFrom:dataPath];
     
     if ([self.window.rootViewController conformsToProtocol:@protocol(TTDDataControllerUser)]) {
         [(id<TTDDataControllerUser>)self.window.rootViewController setDataController:_dataController];

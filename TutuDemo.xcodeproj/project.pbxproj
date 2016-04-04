@@ -27,7 +27,7 @@
 		E90593BA1CAD977A00B2DE82 /* TTDStation+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E90593B51CAD977A00B2DE82 /* TTDStation+CoreDataProperties.m */; };
 		E90593BB1CAD977A00B2DE82 /* TTDStation.m in Sources */ = {isa = PBXBuildFile; fileRef = E90593B71CAD977A00B2DE82 /* TTDStation.m */; };
 		E90593C21CADA17A00B2DE82 /* TTDDemoDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = E90593C11CADA17A00B2DE82 /* TTDDemoDataController.m */; };
-		E90593C41CADADF700B2DE82 /* demo.json in Resources */ = {isa = PBXBuildFile; fileRef = E90593C31CADADF700B2DE82 /* demo.json */; };
+		E90593C41CADADF700B2DE82 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = E90593C31CADADF700B2DE82 /* test.json */; };
 		E90593C71CADBD7400B2DE82 /* TTDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E90593C61CADBD7400B2DE82 /* TTDTabBarController.m */; };
 		E90593CA1CAE92D500B2DE82 /* TTDStationsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E90593C91CAE92D500B2DE82 /* TTDStationsFactory.m */; };
 		E90593CC1CAEBF5200B2DE82 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90593CB1CAEBF5200B2DE82 /* MapKit.framework */; };
@@ -51,6 +51,7 @@
 		E9399D371CB1505400097396 /* test2.json in Resources */ = {isa = PBXBuildFile; fileRef = E9399D361CB1505400097396 /* test2.json */; };
 		E9399D391CB16C0000097396 /* SearchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E9399D381CB16C0000097396 /* SearchUITests.m */; };
 		E9399D3B1CB171C100097396 /* RouteViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E9399D3A1CB171C100097396 /* RouteViewControllerTests.m */; };
+		E9A426A81CB25616009A6D31 /* allStations.json in Resources */ = {isa = PBXBuildFile; fileRef = E9A426A71CB25616009A6D31 /* allStations.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,7 +114,7 @@
 		E90593B71CAD977A00B2DE82 /* TTDStation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTDStation.m; sourceTree = "<group>"; };
 		E90593C01CADA17A00B2DE82 /* TTDDemoDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDDemoDataController.h; sourceTree = "<group>"; };
 		E90593C11CADA17A00B2DE82 /* TTDDemoDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTDDemoDataController.m; sourceTree = "<group>"; };
-		E90593C31CADADF700B2DE82 /* demo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = demo.json; sourceTree = "<group>"; };
+		E90593C31CADADF700B2DE82 /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		E90593C51CADBD7400B2DE82 /* TTDTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDTabBarController.h; sourceTree = "<group>"; };
 		E90593C61CADBD7400B2DE82 /* TTDTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTDTabBarController.m; sourceTree = "<group>"; };
 		E90593C81CAE92D500B2DE82 /* TTDStationsFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDStationsFactory.h; sourceTree = "<group>"; };
@@ -151,6 +152,7 @@
 		E9399D381CB16C0000097396 /* SearchUITests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchUITests.m; sourceTree = "<group>"; };
 		E9399D3A1CB171C100097396 /* RouteViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteViewControllerTests.m; sourceTree = "<group>"; };
 		E9399D3D1CB1879500097396 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E9A426A71CB25616009A6D31 /* allStations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = allStations.json; sourceTree = "<group>"; };
 		EF4ECBFC1085215B338EB71E /* Pods-TutuDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutuDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TutuDemo/Pods-TutuDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F1B892BC50EFDF810BEBD42C /* Pods-TutuDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutuDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TutuDemoTests/Pods-TutuDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -246,7 +248,8 @@
 				E90594401CB0769B00B2DE82 /* Main.storyboard */,
 				E90593701CAD92D700B2DE82 /* LaunchScreen.storyboard */,
 				E90593731CAD92D700B2DE82 /* Info.plist */,
-				E90593C31CADADF700B2DE82 /* demo.json */,
+				E9A426A71CB25616009A6D31 /* allStations.json */,
+				E90593C31CADADF700B2DE82 /* test.json */,
 				E90594451CB076C300B2DE82 /* Localizable.strings */,
 				E90594561CB07BCE00B2DE82 /* InfoPlist.strings */,
 			);
@@ -506,9 +509,10 @@
 				E90593F91CAFFFD100B2DE82 /* TTDStationFullTableViewCell.xib in Resources */,
 				E90594541CB07BCE00B2DE82 /* InfoPlist.strings in Resources */,
 				E905943E1CB0769B00B2DE82 /* Main.storyboard in Resources */,
+				E9A426A81CB25616009A6D31 /* allStations.json in Resources */,
 				E90593721CAD92D700B2DE82 /* LaunchScreen.storyboard in Resources */,
 				E90594431CB076C300B2DE82 /* Localizable.strings in Resources */,
-				E90593C41CADADF700B2DE82 /* demo.json in Resources */,
+				E90593C41CADADF700B2DE82 /* test.json in Resources */,
 				E90593FE1CB004C900B2DE82 /* TTDDatePickerTableViewCell.xib in Resources */,
 				E905936F1CAD92D700B2DE82 /* Assets.xcassets in Resources */,
 			);

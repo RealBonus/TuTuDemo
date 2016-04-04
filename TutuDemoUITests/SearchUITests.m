@@ -20,7 +20,7 @@
     self.continueAfterFailure = NO;
     
     XCUIApplication *app = [[XCUIApplication alloc] init];
-    app.launchArguments = @[@"inMemoryStore"];
+    app.launchArguments = @[@"inMemoryStore", @"testJson"];
     
     [app launch];
 }
