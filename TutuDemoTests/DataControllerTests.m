@@ -39,6 +39,7 @@
 - (void)testDataControllerLoadingAndParsing {
     NSString *testPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"test1" ofType:@"json"];
     [_controller loadDataFrom:testPath];
+    usleep(100000); // TODO: Толстые костыли для ожидания фоновой загрузки.
     
     NSFetchRequest *requestRoot = [NSFetchRequest fetchRequestWithEntityName:[TTDRoot entityName]];
     NSFetchRequest *requestGroup = [NSFetchRequest fetchRequestWithEntityName:[TTDGroup entityName]];
@@ -121,9 +122,11 @@
 - (void)testDataControllerReloadingNewVersion {
     NSString *testPath1 = [[NSBundle bundleForClass:[self class]] pathForResource:@"test1" ofType:@"json"];
     [_controller loadDataFrom:testPath1];
+    usleep(100000); // TODO: Толстые костыли для ожидания фоновой загрузки.
     
     NSString *testPath2 = [[NSBundle bundleForClass:[self class]] pathForResource:@"test2" ofType:@"json"];
     [_controller loadDataFrom:testPath2];
+    usleep(100000);
     
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:[TTDGroup entityName]];
     request.fetchLimit = 1;

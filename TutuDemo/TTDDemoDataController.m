@@ -7,7 +7,7 @@
 //
 
 #import "TTDDemoDataController.h"
-
+#import "TTDImportOperation.h"
 #import "TTDCity.h"
 #import "TTDStation.h"
 #import "TTDGroup.h"
@@ -24,6 +24,7 @@ NSString *const kHBSSaveContextNotification = @"SaveContext";
 
 @implementation TTDDemoDataController {
     BOOL _inMemoryStore;
+    NSOperationQueue *_queue;
 }
 
 #pragma mark - Initialization
@@ -31,6 +32,8 @@ NSString *const kHBSSaveContextNotification = @"SaveContext";
     self = [super init];
     if (self) {
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(saveContext) name:kHBSSaveContextNotification object:nil];
+        _queue = [[NSOperationQueue alloc] init];
+        [self p_setupNotification];
     }
     
     return self;
@@ -38,6 +41,21 @@ NSString *const kHBSSaveContextNotification = @"SaveContext";
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [_queue cancelAllOperations];
+}
+
+- (void)p_setupNotification {
+    [[NSNotificationCenter defaultCenter] addObserverForName:NSManagedObjectContextDidSaveNotification
+                                                      object:nil
+                                                       queue:nil
+                                                  usingBlock:^(NSNotification* note) {
+                                                      NSManagedObjectContext *moc = _managedObjectContext;
+                                                      if (note.object != moc) {
+                                                          [moc performBlock:^(){
+                                                              [moc mergeChangesFromContextDidSaveNotification:note];
+                                                          }];
+                                                      }
+                                                  }];
 }
 
 
@@ -118,112 +136,13 @@ NSString *const kHBSSaveContextNotification = @"SaveContext";
 
 #pragma mark - Background load data
 - (void)loadDataFrom:(NSString*)source {
-    NSError *error = nil;
-    NSData *data = [NSData dataWithContentsOfFile:source options:0 error:&error];
-    if (error) {
-        NSLog(@"Error loading data from source: %@", error);
-        return;
-    }
+    [_queue cancelAllOperations];
     
-    NSDictionary *rootRaw = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
-    if (error) {
-        NSLog(@"Error reading json: %@", error);
-        return;
-    }
-    
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:[TTDRoot entityName]];
-    request.fetchLimit = 1;
-    TTDRoot *root = [[_managedObjectContext executeFetchRequest:request error:nil] firstObject];
-    long version = rootRaw[@"version"] ? [rootRaw[@"version"] longLongValue] : 0;
-    
-    // Проверяем версию полученных данных.
-    // Если загруженных ранее данных нет, или данные новее загруженных - сбрасываем всё и загружаем новые.
-    if (root) {
-        if (root.version >= version) {
-            return;
-        }
-        
-        for (TTDGroup *group in root.groups) {
-            [NSFetchedResultsController deleteCacheWithName:group.title];
-        }
-        
-        [_managedObjectContext deleteObject:root];
-    }
-    
-    root = [NSEntityDescription insertNewObjectForEntityForName:[TTDRoot entityName] inManagedObjectContext:_managedObjectContext];
-    root.version = version;
-    
-    NSArray<NSString*>* keys = @[@"citiesFrom", @"citiesTo"];
-    for (NSString *key in keys) {
-        NSDictionary *groupRaw = rootRaw[key];
-        if (groupRaw) {
-            TTDGroup *group = [self p_parseJsonGroup:groupRaw withContext:_managedObjectContext];
-            group.title = key;
-            [root addGroupsObject:group];
-        }
-    }
-    
-    [_managedObjectContext save:&error];
-    
-    if (error) {
-        NSLog(@"Error saving data: %@", error);
-    }
-}
+    NSManagedObjectContext* privateContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+    privateContext.persistentStoreCoordinator = self.persistentStoreCoordinator;
 
-
-#pragma mark - Parsing
-- (TTDGroup*)p_parseJsonGroup:(NSDictionary*)groupRaw withContext:(NSManagedObjectContext*)context {
-    TTDGroup *group = [NSEntityDescription insertNewObjectForEntityForName:[TTDGroup entityName] inManagedObjectContext:context];
-    
-    for (NSDictionary *cityRaw in groupRaw) {
-        TTDCity *city = [self p_parseJsonCity:cityRaw withContext:context];
-        [group addCitiesObject:city];
-    }
-    
-    return group;
-}
-
-- (TTDCity*)p_parseJsonCity:(NSDictionary*)cityRaw withContext:(NSManagedObjectContext*)context {
-    TTDCity *city = [NSEntityDescription insertNewObjectForEntityForName:[TTDCity entityName] inManagedObjectContext:context];
-    
-    city.countryTitle = cityRaw[@"countryTitle"];
-    city.districtTitle = cityRaw[@"districtTitle"];
-    city.cityId = [cityRaw[@"cityId"] longLongValue];
-    city.cityTitle = cityRaw[@"cityTitle"];
-    city.regionTitle = cityRaw[@"regionTitle"];
-    
-    NSDictionary *cityPointRaw = cityRaw[@"point"];
-    if (cityPointRaw) {
-        city.longitude = [cityPointRaw[@"longitude"] doubleValue];
-        city.latitude = [cityPointRaw[@"latitude"] doubleValue];
-    }
-    
-    for (NSDictionary *stationRaw in cityRaw[@"stations"]) {
-        TTDStation *station = [self p_parseJsonStation:stationRaw withContext:context];
-        [city addStationsObject:station];
-    }
-    
-    return city;
-}
-
-- (TTDStation*)p_parseJsonStation:(NSDictionary*)stationRaw withContext:(NSManagedObjectContext*)context {
-    TTDStation *station = [NSEntityDescription insertNewObjectForEntityForName:[TTDStation entityName] inManagedObjectContext:context];
-    
-    station.countryTitle = stationRaw[@"countryTitle"];
-    station.districtTitle = stationRaw[@"districtTitle"];
-    station.cityTitle = stationRaw[@"cityTitle"];
-    station.regionTitle = stationRaw[@"regionTitle"];
-    station.stationId = [stationRaw[@"stationId"] longLongValue];
-    station.stationTitle = stationRaw[@"stationTitle"];
-    station.cityId = [stationRaw[@"cityId"] longLongValue];
-    
-    NSDictionary *stationPointRaw = stationRaw[@"point"];
-    if (stationPointRaw) {
-        station.longitude = [stationPointRaw[@"longitude"] doubleValue];
-        station.latitude = [stationPointRaw[@"latitude"] doubleValue];
-    }
-    
-    return station;
+    TTDImportOperation *import = [[TTDImportOperation alloc] initWithContext:privateContext source:source];
+    [_queue addOperation:import];
 }
 
 

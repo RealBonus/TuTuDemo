@@ -52,6 +52,7 @@
 		E9399D391CB16C0000097396 /* SearchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E9399D381CB16C0000097396 /* SearchUITests.m */; };
 		E9399D3B1CB171C100097396 /* RouteViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E9399D3A1CB171C100097396 /* RouteViewControllerTests.m */; };
 		E9A426A81CB25616009A6D31 /* allStations.json in Resources */ = {isa = PBXBuildFile; fileRef = E9A426A71CB25616009A6D31 /* allStations.json */; };
+		E9F1DE541CB27B7E00E60826 /* TTDImportOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F1DE531CB27B7E00E60826 /* TTDImportOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +154,8 @@
 		E9399D3A1CB171C100097396 /* RouteViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteViewControllerTests.m; sourceTree = "<group>"; };
 		E9399D3D1CB1879500097396 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E9A426A71CB25616009A6D31 /* allStations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = allStations.json; sourceTree = "<group>"; };
+		E9F1DE521CB27B7E00E60826 /* TTDImportOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDImportOperation.h; sourceTree = "<group>"; };
+		E9F1DE531CB27B7E00E60826 /* TTDImportOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTDImportOperation.m; sourceTree = "<group>"; };
 		EF4ECBFC1085215B338EB71E /* Pods-TutuDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutuDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TutuDemo/Pods-TutuDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F1B892BC50EFDF810BEBD42C /* Pods-TutuDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutuDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TutuDemoTests/Pods-TutuDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -360,6 +363,8 @@
 				E90593991CAD933700B2DE82 /* TTDDataController.h */,
 				E90593C01CADA17A00B2DE82 /* TTDDemoDataController.h */,
 				E90593C11CADA17A00B2DE82 /* TTDDemoDataController.m */,
+				E9F1DE521CB27B7E00E60826 /* TTDImportOperation.h */,
+				E9F1DE531CB27B7E00E60826 /* TTDImportOperation.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -680,6 +685,7 @@
 				E90593CF1CAFB5DA00B2DE82 /* TTDStationsSearchResultViewController.m in Sources */,
 				E90593A51CAD933700B2DE82 /* TTDStationDetailsViewController.m in Sources */,
 				E90594D21CB12E4400B2DE82 /* TTDRoot+CoreDataProperties.m in Sources */,
+				E9F1DE541CB27B7E00E60826 /* TTDImportOperation.m in Sources */,
 				E90593E21CAFC98100B2DE82 /* TTDMapTableViewCell.m in Sources */,
 				E90593CA1CAE92D500B2DE82 /* TTDStationsFactory.m in Sources */,
 				E90593B81CAD977A00B2DE82 /* TTDCity+CoreDataProperties.m in Sources */,
