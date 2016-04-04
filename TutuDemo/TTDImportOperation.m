@@ -83,9 +83,11 @@
                 return;
             }
             
-            TTDGroup *group = [self p_parseJsonGroup:groupRaw withContext:_context];
+            TTDGroup *group = [NSEntityDescription insertNewObjectForEntityForName:[TTDGroup entityName] inManagedObjectContext:_context];
             group.title = key;
             [root addGroupsObject:group];
+            
+            [self p_parseJsonGroup:groupRaw withGroup:group];
         }
     }
     
@@ -95,30 +97,27 @@
 
 
 #pragma mark - Parsing
-- (TTDGroup*)p_parseJsonGroup:(NSDictionary*)groupRaw withContext:(NSManagedObjectContext*)context {
-    TTDGroup *group = [NSEntityDescription insertNewObjectForEntityForName:[TTDGroup entityName] inManagedObjectContext:context];
-    
+- (void)p_parseJsonGroup:(NSDictionary*)groupRaw withGroup:(TTDGroup*)group {
     int imported = 0;
     
     for (NSDictionary *cityRaw in groupRaw) {
         if (self.isCancelled)
-            return group;
+            return;
         
-        TTDCity *city = [self p_parseJsonCity:cityRaw withContext:context];
+        TTDCity *city = [NSEntityDescription insertNewObjectForEntityForName:[TTDCity entityName]
+                                                      inManagedObjectContext:group.managedObjectContext];
         [group addCitiesObject:city];
+        
+        [self p_parseJsonCity:cityRaw withCity:city];
         
         if (++imported > _updateRate) {
             imported = 0;
-            [_context save:nil];
+            [group.managedObjectContext save:nil];
         }
     }
-    
-    return group;
 }
 
-- (TTDCity*)p_parseJsonCity:(NSDictionary*)cityRaw withContext:(NSManagedObjectContext*)context {
-    TTDCity *city = [NSEntityDescription insertNewObjectForEntityForName:[TTDCity entityName] inManagedObjectContext:context];
-    
+- (TTDCity*)p_parseJsonCity:(NSDictionary*)cityRaw withCity:(TTDCity*)city {
     city.countryTitle = cityRaw[@"countryTitle"];
     city.districtTitle = cityRaw[@"districtTitle"];
     city.cityId = [cityRaw[@"cityId"] longLongValue];
@@ -135,16 +134,16 @@
         if (self.isCancelled)
             return city;
         
-        TTDStation *station = [self p_parseJsonStation:stationRaw withContext:context];
+        TTDStation *station = [NSEntityDescription insertNewObjectForEntityForName:[TTDStation entityName]
+                                                            inManagedObjectContext:city.managedObjectContext];
         [city addStationsObject:station];
+        [self p_parseJsonStation:stationRaw withStation:station];
     }
     
     return city;
 }
 
-- (TTDStation*)p_parseJsonStation:(NSDictionary*)stationRaw withContext:(NSManagedObjectContext*)context {
-    TTDStation *station = [NSEntityDescription insertNewObjectForEntityForName:[TTDStation entityName] inManagedObjectContext:context];
-    
+- (TTDStation*)p_parseJsonStation:(NSDictionary*)stationRaw withStation:(TTDStation*)station {
     station.countryTitle = stationRaw[@"countryTitle"];
     station.districtTitle = stationRaw[@"districtTitle"];
     station.cityTitle = stationRaw[@"cityTitle"];
