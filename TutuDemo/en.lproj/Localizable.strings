@@ -1,0 +1,68 @@
+/* 
+  Localizable.strings
+  TutuDemo
+
+  Created by Павел Анохов on 03.04.16.
+  Copyright © 2016 IndependentLabs. All rights reserved.
+*/
+
+
+/* Main window title */
+"Route_window_title" = "Route";
+
+/* About window title */
+"About_window_Title" = "About";
+
+/* Arrival station window title */
+"Arrival_window_title" = "Arrival";
+
+/* Main page arrival section title */
+"Arrival_section" = "Arrival station";
+
+/* Main window, 'Buy tickets' button */
+"Buy_tickets_button" = "Buy Tickets...";
+
+/* Clear selected station button */
+"Clear_button" = "Clear";
+
+/* Station info City row title */
+"City_row_title" = "City";
+
+/* Station info Country row title */
+"Country_row_title" = "Country";
+
+/* Departure station window title */
+"Departure_window_title" = "Departure";
+
+/* Main page departure date section title */
+"Departure_date_section" = "Departure date";
+
+/* Main page departure section title */
+"Departure_section" = "Departure station";
+
+/* Station info District row title */
+"District_row_title" = "District";
+
+/* Main page empty departure cell placeholder */
+"From_cell_placeholder" = "From...";
+
+/* Station info window title */
+"Info_window_title" = "Info";
+
+/* Tickets demo alert */
+"Demo_alert_title" = "Not in demo!";
+
+/* Station info Region row title */
+"Region_row_title" = "Region";
+
+/* Main page tickets section title */
+"Tickets_section" = "Tickets";
+
+/* Main page empty arrival cell placeholder */
+"To_cell_placeholder" = "To...";
+
+/* App name on About page */
+"Product_full_name" = "TuTu Demo";
+
+/* Full copyrights */
+"COPYRIGHT" = "Some copyrights.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";

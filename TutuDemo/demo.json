@@ -1,0 +1,280 @@
+{
+    "version": 1,
+    "citiesFrom": [
+        {
+            "countryTitle": "Австрия",
+            "point": {
+                "longitude": 16.36879539489746,
+                "latitude": 48.20253753662109
+            },
+            "districtTitle": "",
+            "cityId": 2352,
+            "cityTitle": "Вена",
+            "regionTitle": "",
+            "stations": [
+                {
+                    "countryTitle": "Австрия",
+                    "point": {
+                        "longitude": 16.3721073,
+                        "latitude": 48.1852229
+                    },
+                    "districtTitle": "Alfred-Adler-Straße",
+                    "cityId": 2352,
+                    "cityTitle": "Вена",
+                    "regionTitle": "Vienna region",
+                    "stationId": 10154,
+                    "stationTitle": "Vienna Central Station"
+                },
+                {
+                    "countryTitle": "Австрия",
+                    "point": {
+                        "longitude": 16.335969,
+                        "latitude": 48.1955008
+                    },
+                    "districtTitle": "Europaplatz 2, 1190 Wien",
+                    "cityId": 2352,
+                    "cityTitle": "Вена",
+                    "regionTitle": "Vienna region",
+                    "stationId": 10155,
+                    "stationTitle": "Wien Heiligenstadt"
+                },
+                {
+                    "countryTitle": "Австрия",
+                    "point": {
+                        "longitude": 16.335969,
+                        "latitude": 48.1955008
+                    },
+                    "districtTitle": "Europaplatz 2, 1150 Wien",
+                    "cityId": 2352,
+                    "cityTitle": "Вена",
+                    "regionTitle": "Vienna region",
+                    "stationId": 10156,
+                    "stationTitle": "Wien Westbahnhof"
+                }
+            ]
+        },
+        {
+            "countryTitle": "Австрия",
+            "point": {
+                "longitude": 12.9166904,
+                "latitude": 47.8029558
+            },
+            "districtTitle": "Såizburga Lãnd",
+            "cityId": 2353,
+            "cityTitle": "Зальцбург",
+            "regionTitle": "Баварские окрестности",
+            "stations": [
+                {
+                    "countryTitle": "Австрия",
+                    "point": {
+                        "longitude": 13.0457547,
+                        "latitude": 47.813416
+                    },
+                    "districtTitle": "Lastenstraße, 5020, Salzburg",
+                    "cityId": 2353,
+                    "cityTitle": "Зальцбург",
+                    "regionTitle": "Såizburga Lãnd",
+                    "stationId": 12154,
+                    "stationTitle": "Salzburg Hbf"
+                },
+                {
+                    "countryTitle": "Австрия",
+                    "point": {
+                        "longitude": 16.36879539489746,
+                        "latitude": 49.20253753662109
+                    },
+                    "districtTitle": "5020, Salzburg",
+                    "cityId": 2353,
+                    "cityTitle": "Зальцбург",
+                    "regionTitle": "Såizburga Lãnd",
+                    "stationId": 12155,
+                    "stationTitle": "Salzburg Parsch"
+                }
+            ]
+        },
+        {
+            "countryTitle": "Россия",
+            "point": {
+                "longitude": 30.1336646,
+                "latitude": 59.8522173
+            },
+            "districtTitle": "",
+            "cityId": 2354,
+            "cityTitle": "Санкт Петербург",
+            "regionTitle": "Ленинградская область",
+            "stations": [
+                {
+                    "countryTitle": "Россия",
+                    "point": {
+                        "longitude": 30.362084,
+                        "latitude": 59.9298506
+                    },
+                    "districtTitle": "Невский пр., 85",
+                    "cityId": 2354,
+                    "cityTitle": "Санкт Петербург",
+                    "regionTitle": "Ленинградская область",
+                    "stationId": 17158,
+                    "stationTitle": "Московский вокзал"
+                },
+                {
+                    "countryTitle": "Россия",
+                    "point": {
+                        "longitude": 30.355863,
+                        "latitude": 59.956861
+                    },
+                    "districtTitle": "пл.Ленина, 6",
+                    "cityId": 2354,
+                    "cityTitle": "Санкт Петербург",
+                    "regionTitle": "Ленинградская область",
+                    "stationId": 17159,
+                    "stationTitle": "Финский вокзал"
+                }
+            ]
+        }
+    ],
+    "citiesTo": [
+        {
+            "countryTitle": "Германия",
+            "point": {
+                "longitude": 12.8661072,
+                "latitude": 52.5070609
+            },
+            "districtTitle": "",
+            "cityId": 2355,
+            "cityTitle": "Берлин",
+            "regionTitle": "Берлин",
+            "stations": [
+                {
+                    "countryTitle": "Германия",
+                    "point": {
+                        "longitude": 13.4299785,
+                        "latitude": 52.5090367
+                    },
+                    "districtTitle": "10243, Берлин",
+                    "cityId": 2355,
+                    "cityTitle": "Берлин",
+                    "regionTitle": "Берлин",
+                    "stationId": 202020,
+                    "stationTitle": "Ostbahnhof"
+                },
+                {
+                    "countryTitle": "Германия",
+                    "point": {
+                        "longitude": 13.381978,
+                        "latitude": 52.5487423
+                    },
+                    "districtTitle": "Badstraße 1-3, 13357, Берлин",
+                    "cityId": 2355,
+                    "cityTitle": "Берлин",
+                    "regionTitle": "Берлин",
+                    "stationId": 202021,
+                    "stationTitle": "Berlin Gesundbrunnen"
+                },
+                {
+                    "countryTitle": "Германия",
+                    "point": {
+                        "longitude": 13.3985421,
+                        "latitude": 52.5333554
+                    },
+                    "districtTitle": "Flughafen Tegel,13405, Берлин",
+                    "cityId": 2355,
+                    "cityTitle": "Берлин",
+                    "regionTitle": "Берлин",
+                    "stationId": 202022,
+                    "stationTitle": "Берлинский аэропорт Тегель"
+                }
+            ]
+        },
+        {
+            "countryTitle": "Норвегия",
+            "point": {
+                "longitude": 4.87016851,
+                "latitude": 60.3646972
+            },
+            "districtTitle": "",
+            "cityId": 2357,
+            "cityTitle": "Берген",
+            "regionTitle": "Фюльке Хордаланн",
+            "stations": [
+                {
+                    "countryTitle": "Норвегия",
+                    "point": {
+                        "longitude": 5.3301274,
+                        "latitude": 60.3859846
+                    },
+                    "districtTitle": "Strømgaten 8,5015, Берген",
+                    "cityId": 2357,
+                    "cityTitle": "Берген",
+                    "regionTitle": "Фюльке Хордаланн",
+                    "stationId": 202030,
+                    "stationTitle": "Bergen"
+                }
+            ]
+        },
+        {
+            "countryTitle": "Норвегия",
+            "point": {
+                "longitude": 10.5056303,
+                "latitude": 59.8939036,
+            },
+            "districtTitle": "",
+            "cityId": 2358,
+            "cityTitle": "Осло",
+            "regionTitle": "Oslofjorden",
+            "stations": [
+                {
+                    "countryTitle": "Норвегия",
+                    "point": {
+                        "longitude": 10.7305519,
+                        "latitude": 59.912358,
+                    },
+                    "districtTitle": "Jernbanetorget 1,154, Осло",
+                    "cityId": 2358,
+                    "cityTitle": "Осло",
+                    "regionTitle": "Oslofjorden",
+                    "stationId": 202031,
+                    "stationTitle": "Центральный вокзал Осло"
+                }
+            ]
+        },
+        {
+            "countryTitle": "Дания",
+            "point": {
+                "longitude": 12.4207571,
+                "latitude": 55.6711876,
+            },
+            "districtTitle": "",
+            "cityId": 2360,
+            "cityTitle": "Копенгаген",
+            "regionTitle": "Sjælland",
+            "stations": [
+                {
+                    "countryTitle": "Дания",
+                    "point": {
+                        "longitude": 12.5539602,
+                        "latitude": 55.6649169,
+                    },
+                    "districtTitle": "1560, Копенгаген",
+                    "cityId": 2360,
+                    "cityTitle": "Копенгаген",
+                    "regionTitle": "Sjælland",
+                    "stationId": 202035,
+                    "stationTitle": "Dybbølsbro"
+                },
+                {
+                    "countryTitle": "Дания",
+                    "point": {
+                        "longitude": 12.551451,
+                        "latitude": 55.6727113
+                    },
+                    "districtTitle": "København,1651",
+                    "cityId": 2360,
+                    "cityTitle": "Копенгаген",
+                    "regionTitle": "Sjælland",
+                    "stationId": 202036,
+                    "stationTitle": "København H"
+                }
+            ]
+        }
+    ]
+}

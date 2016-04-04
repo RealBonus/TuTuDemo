@@ -1,0 +1,15 @@
+PODS:
+  - HBSFetchedTableController (1.0.2)
+  - WHRoundedImageView (1.1.2)
+
+DEPENDENCIES:
+  - HBSFetchedTableController
+  - WHRoundedImageView
+
+SPEC CHECKSUMS:
+  HBSFetchedTableController: cff22588ac3a5aafe7dc66ee0bc798108f546966
+  WHRoundedImageView: 5d68870a4e1b5b5bfb215048940cf6c0d7aa2746
+
+PODFILE CHECKSUM: 18f4082a951bcb845e0885478b2bb448ae1fbe67
+
+COCOAPODS: 1.0.0.beta.6

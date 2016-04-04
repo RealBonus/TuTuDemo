@@ -1,0 +1,6 @@
+framework module Pods_TutuDemoTests {
+  umbrella header "Pods-TutuDemoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

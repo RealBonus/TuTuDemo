@@ -1,0 +1,59 @@
+{
+    "version": 1,
+    "citiesFrom": [
+        {
+            "countryTitle": "Австрия",
+            "point": {
+                "longitude": 22,
+                "latitude": 33
+            },
+            "districtTitle": "Район Вены",
+            "cityId": 2352,
+            "cityTitle": "Вена",
+            "regionTitle": "Регион Вены",
+            "stations": [
+                {
+                    "countryTitle": "Австрия",
+                    "point": {
+                        "longitude": 44,
+                        "latitude": 55
+                    },
+                    "districtTitle": "Район Вены",
+                    "cityId": 2352,
+                    "cityTitle": "Вена",
+                    "regionTitle": "Регион Вены",
+                    "stationId": 10154,
+                    "stationTitle": "Станция такая-то."
+                }
+            ]
+        }
+    ],
+    "citiesTo": [
+        {
+            "countryTitle": "Германия",
+            "point": {
+                "longitude": 11,
+                "latitude": 12
+            },
+            "districtTitle": "Баварские окрестности",
+            "cityId": 2355,
+            "cityTitle": "Бавария",
+            "regionTitle": "Регион Баварский",
+            "stations": [
+                {
+                    "countryTitle": "Германия",
+                    "point": {
+                        "longitude": 13,
+                        "latitude": 14
+                    },
+                    "districtTitle": "Баварские окрестности",
+                    "cityId": 2355,
+                    "cityTitle": "Бавария",
+                    "regionTitle": "Регион Баварский",
+                    "stationId": 10159,
+                    "stationTitle": "Дер гуттен Станция"
+                }
+            ]
+        }
+    ]
+}

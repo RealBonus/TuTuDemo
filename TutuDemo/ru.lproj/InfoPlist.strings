@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  TutuDemo
+
+  Created by Павел Анохов on 03.04.16.
+  Copyright © 2016 IndependentLabs. All rights reserved.
+*/
+
+CFBundleName = "TyTy";
+CFBundleDisplayName = "TyTy";

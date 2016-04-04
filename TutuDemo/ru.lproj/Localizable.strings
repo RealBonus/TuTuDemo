@@ -1,0 +1,68 @@
+/* 
+  Localizable.strings
+  TutuDemo
+
+  Created by Павел Анохов on 03.04.16.
+  Copyright © 2016 IndependentLabs. All rights reserved.
+*/
+
+
+/* Main window title */
+"Route_window_title" = "Маршрут";
+
+/* About window title */
+"About_window_Title" = "О нас";
+
+/* Arrival station window title */
+"Arrival_window_title" = "Прибытие";
+
+/* Main page arrival section title */
+"Arrival_section" = "Станция прибытия";
+
+/* Main window, 'Buy tickets' button */
+"Buy_tickets_button" = "Купить билеты...";
+
+/* Clear selected station button */
+"Clear_button" = "Удалить";
+
+/* Station info City row title */
+"City_row_title" = "Город";
+
+/* Station info Country row title */
+"Country_row_title" = "Страна";
+
+/* Departure station window title */
+"Departure_window_title" = "Отправление";
+
+/* Main page departure date section title */
+"Departure_date_section" = "Дата отправления";
+
+/* Main page departure section title */
+"Departure_section" = "Станция отправления";
+
+/* Station info District row title */
+"District_row_title" = "Район";
+
+/* Main page empty departure cell placeholder */
+"From_cell_placeholder" = "Отправление...";
+
+/* Station info window title */
+"Info_window_title" = "Информация";
+
+/* Tickets demo alert */
+"Demo_alert_title" = "Не доступно в демо!";
+
+/* Station info Region row title */
+"Region_row_title" = "Регион";
+
+/* Main page tickets section title */
+"Tickets_section" = "Билеты";
+
+/* Main page empty arrival cell placeholder */
+"To_cell_placeholder" = "Прибытие...";
+
+/* App name on About page */
+"Product_full_name" = "ТуТу Демо";
+
+/* Full copyrights */
+"COPYRIGHT" = "Все права находятся под защитой ЮНЕСКО.\n\nДавно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации \"Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст..\" Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам \"lorem ipsum\" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).";
